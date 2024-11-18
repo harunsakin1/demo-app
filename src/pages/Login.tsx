@@ -36,6 +36,8 @@ function Login() {
                 'password': password
             })
         }).then(data=>data.json()).then(res=>{
+            console.log(res)
+            sessionStorage.setItem('accessToken',res.data)
             if(res.code===200){
                 swal('Giriş Başarılı.');
             }

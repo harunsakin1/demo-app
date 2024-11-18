@@ -11,11 +11,23 @@ import Odev3 from './pages/Odev3';
 import UserPage from './pages/UserPage';
 import Yarisma from './pages/Yarisma';
 import UrunTablosu from './pages/UrunTablosu';
-
+import ProductList from './pages/ProductList';
+import {Provider} from 'react-redux';
+import store from './store'
+import routeSayfasi from './routeSayfasi';
+import RouterPage from './routeSayfasi';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(
-  <UrunTablosu/>
-);
+/**
+ * Store, tüm uygulama içerisinde kullanılacak olan global stateleri içerisinde barındıran ve bir değişiklik olduğunda bu değişikliği ilgili component'a bildiren ve 
+ * provide eden bir yapı kullanır.
+ *  Böylece uygulamanın herhangi bir bileşeninden istenilen store(slice) içerisinde yer alan state değerine ulaşılabilir, değiştirilebilir, takibe alınılabilir.
+ */
+  root.render(
+    <Provider store={store}>
+        <RouterPage/>
+    </Provider>
+    
+  );
 

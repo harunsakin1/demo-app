@@ -25,7 +25,7 @@ function UrunCard(props: IUrunCardProps) {
                                 <label>{props.data.ad}</label>
                             </div>
                             <div className="row mt-3">
-                                <label>{props.data.fiyat}</label>
+                                <label>{props.data.fiyat} ₺</label>
                             </div>
                             <div className="row mt-2 mb-2">
                                 <div className="col-2">
